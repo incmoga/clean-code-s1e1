@@ -17,7 +17,8 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 //New task list item
 var createNewTaskElement=function(taskString){
 
-    var listItem=document.createElement("li");
+    var listItem = document.createElement("li");
+    listItem.className = "task-list__item";
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -30,7 +31,8 @@ var createNewTaskElement=function(taskString){
 
     //button.delete
     var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
+    var deleteButtonImg = document.createElement("img");//delete button image
+    deleteButtonImg.className = "task-list__icon-remove";
 
     label.innerText=taskString;
     label.className='task-list__text';
@@ -147,9 +149,14 @@ var ajaxRequest=function(){
 
 
 //Set the click handler to the addTask function.
-addButton.onclick=addTask;
-addButton.addEventListener("click",addTask);
-addButton.addEventListener("click",ajaxRequest);
+addButton.addEventListener("click", function (e) {
+    e.preventDefault()
+    addTask();
+    ajaxRequest();
+});
+// addButton.onclick=addTask;
+// addButton.addEventListener("click",addTask);
+// addButton.addEventListener("click",ajaxRequest);
 
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){

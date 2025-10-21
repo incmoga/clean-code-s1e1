@@ -43,12 +43,14 @@ body {
 .task-list__title {
   list-style: none;
 }
+.add-form__input,
 .task-list__checkbox,
 .task-list__edit-input,
 .task-list__edit-btn,
 .task-list__delete-btn{
   outline: none;
 }
+.add-form__submit,
 .task-list__edit-btn,
 .task-list__delete-btn{
   background: none;
@@ -74,6 +76,7 @@ body {
   margin: 0;
   text-transform: uppercase;
 }
+.add-form__input,
 .task-list__edit-input {
   margin: 0;
   font-size: 18px;
@@ -95,8 +98,8 @@ body {
   display: block;
   margin: 0 0 20px;
 }
-.add-form__input {
-  width: 318px;
+.add-form__input{
+  width: 100%;
 }
 
 /* Task list */
