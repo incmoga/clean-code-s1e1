@@ -27,11 +27,6 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-.task-list__text {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
 .add-form__input-wrapper {
   display: flex;
 }
@@ -119,13 +114,15 @@ body {
   margin: 0 10px;
 }
 .task-list__text {
+  display: inline-block;
+  flex-grow: 1;
+  width: 56%;
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
 }
 .task-list__edit-input {
-  width: 226px;
+  width: 56%;
 }
 .task-list__icon-remove{
   height: 2em;
