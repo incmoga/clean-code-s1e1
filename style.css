@@ -13,7 +13,7 @@ body {
 .header__wrapper img {
   width: 100%;
 }
-.header__wrapper .info {
+.header__wrapper {
   font-family: fantasy, cursive;
 }
 
